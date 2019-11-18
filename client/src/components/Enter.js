@@ -2,13 +2,13 @@ import React from 'react';
 import Login from './Login';
 import SignUp from './SignUp';
 
-const Enter = () => {
+const Enter = ({ history }) => {
   return (
     <div>
       <h2>Login</h2>
-      <Login />
+      <Login history={history} />
       <h2>or Sign Up</h2>
-      <SignUp />
+      <SignUp history={history} />
     </div>
   );
 };
