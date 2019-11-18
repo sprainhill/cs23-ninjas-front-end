@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const SignUp = ({ history }) => {
+const SignUp = ({ history, setIsLoggedIn, setIsLoading }) => {
   const [user, setUser] = useState({
     username: '',
     password1: '',
@@ -20,13 +20,19 @@ const SignUp = ({ history }) => {
     console.log('user from register handlesubmit', user);
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     const url = 'https://lambda-mud-test.herokuapp.com/';
+    setIsLoading(true);
     axios
       .post(`${proxy}${url}/api/registration/`, user)
       .then(res => {
         localStorage.setItem('token', res.data.key);
+        setIsLoading(false);
+        setIsLoggedIn(true);
         history.push('/play');
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        setIsLoading(false);
+      });
   };
   return (
     <div>
