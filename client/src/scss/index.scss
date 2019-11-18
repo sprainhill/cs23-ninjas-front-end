@@ -12,11 +12,26 @@ code {
     monospace;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
   background: #231927;
   height: 100vh;
   color: white;
+}
+
+.App-header {
+  padding: 25px 0 15px 0;
 }
 
 .Loading-container {
@@ -37,5 +52,107 @@ code {
     width: max-content;
     margin: 0 auto;
     color: white;
+  }
+}
+
+.game-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  .box {
+    background: #171119;
+    box-shadow: inset 0px 0px 60px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+  }
+  hr {
+    border: 0.5px solid #35ff69;
+  }
+  .room-info-text {
+    color: #d86aff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+  }
+  p {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+
+    color: #35ff69;
+  }
+  h3 {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #35ff69;
+  }
+  .map {
+    height: 47vh;
+    h3 {
+      margin-bottom: 15px;
+    }
+    p,
+    h3 {
+      text-align: left;
+    }
+    span {
+      font-weight: bold;
+    }
+    img {
+      width: 100%;
+      margin: 15px 0;
+    }
+  }
+  .player-info {
+    height: 30vh;
+  }
+  .command-input {
+    height: 70px;
+    input {
+      border: none;
+      background: none;
+      width: 100%;
+    }
+  }
+  .game-info {
+    height: calc(80vh - 90px);
+    text-align: left;
+    padding: 20px 24px;
+  }
+  .players-online {
+    height: 50%;
+    text-align: left;
+    overflow-y: scroll;
+    p {
+      margin: 15px 0;
+    }
+  }
+  .chat {
+    height: 50%;
+  }
+  .column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 80vh;
+  }
+  .side {
+    width: calc(20% - 20px);
+  }
+  .middle {
+    width: 60%;
   }
 }
