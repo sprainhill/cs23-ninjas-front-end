@@ -5,7 +5,7 @@ import Game from './components/Game.js';
 import Loading from './components/Loading.js';
 
 import tunnelNinjas from './assets/images/tunnelNinjas.svg';
-import './App.css';
+import './scss/index.scss';
 
 function App(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
