@@ -2,7 +2,7 @@ import React from 'react';
 
 import fakeMap from '../assets/images/map-sample.png';
 
-const Map = ({ gameInfo }) => {
+const MapDisplay = ({ gameInfo }) => {
   return (
     <div>
       <h3>{gameInfo.title}</h3>
@@ -15,4 +15,4 @@ const Map = ({ gameInfo }) => {
   );
 };
 
-export default Map;
+export default MapDisplay;

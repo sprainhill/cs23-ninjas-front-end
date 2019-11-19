@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utilities/axiosWithAuth.js';
 
 import Player from './Player.js';
-import Map from './Map.js';
+import MapDisplay from './MapDisplay';
 import Input from './Input.js';
 import PlayersInRoom from './PlayersInRoom.js';
 import Chat from './Chat.js';
@@ -72,7 +72,7 @@ const Game = ({ logout }) => {
       <div className="game-container">
         <div className="column side">
           <div className="box map">
-            <Map gameInfo={gameInfo} />
+            <MapDisplay gameInfo={gameInfo} />
           </div>
           <div className="box player-info">
             <Player gameInfo={gameInfo} />
