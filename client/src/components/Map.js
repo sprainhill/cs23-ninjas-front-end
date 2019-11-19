@@ -24,10 +24,26 @@ export default () => {
     initMap();
   }, []);
 
-  console.log('map : ', map);
-  //   console.log(JSON.parse(JSON.stringify(map)));
-  //   const testMap = JSON.parse(JSON.stringify(map));
-  //   console.log(typeof testMap);
+  React.useEffect(() => {
+    generateMap();
+  }, []);
+
+  // instantiate empty array
+  // fill it with objects at every point
+  // in matrix
+
+  let gameMap = [];
+  let rows = 10;
+  let columns = 10;
+  let totalNodes = rows * columns;
+
+  const generateMap = () => {
+    for (let i = 0; i <= totalNodes; i++) {
+      gameMap.push({});
+    }
+  };
+
+  console.log('gameMap : ', gameMap);
 
   return (
     <div>

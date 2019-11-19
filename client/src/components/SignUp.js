@@ -22,7 +22,7 @@ const SignUp = ({ history, setIsLoggedIn, setIsLoading }) => {
     const url = 'https://lambda-mud-test.herokuapp.com/';
     setIsLoading(true);
     axios
-      .post(`${proxy}${url}/api/registration/`, user)
+      .post(`${proxy}${url}api/registration/`, user)
       .then(res => {
         localStorage.setItem('token', res.data.key);
         setIsLoading(false);
