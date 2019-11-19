@@ -1,6 +1,9 @@
 import React from 'react';
 
-const Input = ({ move, handleChange, direction }) => {
+const Input = ({ move, setDirection, direction }) => {
+  const handleChange = e => {
+    setDirection(e.target.value);
+  };
   return (
     <div>
       <form onSubmit={e => move(e, direction)}>
