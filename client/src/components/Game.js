@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utilities/axiosWithAuth.js';
+import Map from './Map';
 
 import fakeMap from '../assets/images/map-sample.png';
 

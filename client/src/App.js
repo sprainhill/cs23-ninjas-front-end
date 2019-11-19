@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 
 import Enter from './components/Enter.js';
 import Game from './components/Game.js';
 import Loading from './components/Loading.js';
+import Map from './components/Map';
 
 import tunnelNinjas from './assets/images/tunnelNinjas.svg';
 import './scss/index.scss';
@@ -28,7 +30,10 @@ function App(props) {
       {isLoading ? (
         <Loading />
       ) : isLoggedIn ? (
-        <Game props={props} logout={logout} />
+        <div>
+          <Game props={props} logout={logout} />
+          <Route path="/map" component={Map} />
+        </div>
       ) : (
         <Enter setIsLoading={setIsLoading} setIsLoggedIn={setIsLoggedIn} />
       )}
