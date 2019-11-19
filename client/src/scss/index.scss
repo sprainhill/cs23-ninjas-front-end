@@ -77,6 +77,15 @@ p {
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.04em;
+    margin-bottom: 15px;
+  }
+  .move-info-text {
+    color: #35ff69;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
   }
   p {
     font-family: Roboto Mono;
@@ -131,6 +140,7 @@ p {
     height: calc(80vh - 90px);
     text-align: left;
     padding: 20px 24px;
+    overflow-y: scroll;
   }
   .players-online {
     height: 50%;

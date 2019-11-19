@@ -28,7 +28,7 @@ function App(props) {
       {isLoading ? (
         <Loading />
       ) : isLoggedIn ? (
-        <Game props={props} logout={logout} />
+        <Game setIsLoading={setIsLoading} props={props} logout={logout} />
       ) : (
         <Enter setIsLoading={setIsLoading} setIsLoggedIn={setIsLoggedIn} />
       )}
