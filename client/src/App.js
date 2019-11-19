@@ -31,7 +31,8 @@ function App(props) {
         <Loading />
       ) : isLoggedIn ? (
         <div>
-          <Game props={props} logout={logout} />
+          <Route path="/game" render={() => <Game props={props} logout={logout} />} />
+          {/* <Game props={props} logout={logout} /> */}
           <Route path="/map" component={Map} />
         </div>
       ) : (
