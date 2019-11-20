@@ -1,6 +1,5 @@
 import React from 'react';
 
-import fakeMap from '../assets/images/map-sample.png';
 import MapSample from './MapSample';
 
 const MapDisplay = ({ gameInfo }) => {
