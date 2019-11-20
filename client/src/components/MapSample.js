@@ -8,8 +8,6 @@ const myConfig = {
   height: 240,
   staticGraph: true,
   staticGraphWithDragAndDrop: false,
-  maxZoom: 0.7,
-  minZoom: 0.7,
   d3: {
     alphaTarget: 0,
     gravity: -400,
