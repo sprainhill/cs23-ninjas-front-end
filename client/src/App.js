@@ -8,6 +8,7 @@ import Map from './components/Map';
 
 import tunnelNinjas from './assets/images/tunnelNinjas.svg';
 import './scss/index.scss';
+import MapSample from './components/MapSample.js';
 
 function App(props) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -37,6 +38,7 @@ function App(props) {
       ) : (
         <Enter setIsLoading={setIsLoading} setIsLoggedIn={setIsLoggedIn} />
       )}
+      <Route exact path="/sample-map" component={MapSample} />
     </div>
   );
 }

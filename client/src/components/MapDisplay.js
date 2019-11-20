@@ -1,6 +1,6 @@
 import React from 'react';
 
-import fakeMap from '../assets/images/map-sample.png';
+import MapSample from './MapSample';
 
 const MapDisplay = ({ gameInfo }) => {
   return (
@@ -9,7 +9,10 @@ const MapDisplay = ({ gameInfo }) => {
       <p>
         <span>Exits:</span> West, North, South
       </p>
-      <img src={fakeMap} />
+      <div className="map-container">
+        <MapSample />
+      </div>
+
       <p>Items In Room:</p>
     </div>
   );

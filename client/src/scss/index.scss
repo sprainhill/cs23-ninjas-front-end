@@ -166,3 +166,16 @@ p {
     width: 60%;
   }
 }
+
+.sample-map-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.map-container {
+  width: calc(100% + 48px);
+  height: 220px;
+  background-color: #090909;
+  margin: 15px 0 15px -24px;
+  overflow: hidden;
+}
