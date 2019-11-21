@@ -2,7 +2,7 @@ import React from 'react';
 
 import MapSample from './MapSample';
 
-const MapDisplay = ({ gameInfo }) => {
+const MapDisplay = ({ mapRooms, gameInfo }) => {
   return (
     <div>
       <h3>{gameInfo.title}</h3>
@@ -10,7 +10,7 @@ const MapDisplay = ({ gameInfo }) => {
         <span>Exits:</span> West, North, South
       </p>
       <div className="map-container">
-        <MapSample />
+        <MapSample mapRooms={mapRooms} gameInfo={gameInfo} />
       </div>
 
       <p>Items In Room:</p>

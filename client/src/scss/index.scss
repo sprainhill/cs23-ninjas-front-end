@@ -23,6 +23,11 @@ p {
   padding: 0;
 }
 
+hr {
+  border: 0.5px solid #35ff69;
+  width: 100%;
+}
+
 .App {
   text-align: center;
   background: #231927;
@@ -55,6 +60,86 @@ p {
   }
 }
 
+.enter-form-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 48%;
+  margin: 80px auto;
+  .form {
+    background: #201823;
+    box-shadow: inset 0px 0px 60px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 45px 35px;
+    width: 36%;
+    height: 42vh;
+    h2 {
+      font-family: Baloo;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 30px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #35ff69;
+    }
+    input {
+      background: none;
+      border: none;
+      text-align: center;
+      height: 50px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Roboto Mono;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      &::placeholder {
+        color: #35ff69;
+      }
+    }
+    input[type='text'] {
+      color: #35ff69;
+    }
+    input[type='password'] {
+      color: #35ff69;
+    }
+    form {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: space-between;
+      height: 100%;
+    }
+    .form-button {
+      background: #35ff69;
+      border: none;
+      height: 60px;
+      border-radius: 6px;
+      font-family: Roboto Mono;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      color: #231927;
+      cursor: pointer;
+      &:hover {
+        border: 2px solid #35ff69;
+        background: none;
+        color: #35ff69;
+      }
+    }
+  }
+}
+
 .game-container {
   display: flex;
   flex-flow: row nowrap;
@@ -68,9 +153,7 @@ p {
     margin-bottom: 20px;
     padding: 12px 24px;
   }
-  hr {
-    border: 0.5px solid #35ff69;
-  }
+
   .room-info-text {
     color: #d86aff;
     font-family: 'Roboto Mono', monospace;

@@ -28,9 +28,8 @@ function App(props) {
       <header className="App-header">
         <img src={tunnelNinjas} alt="Tunnel Ninjas logo" />
       </header>
-      {isLoading ? (
-        <Loading />
-      ) : isLoggedIn ? (
+      {isLoading && <Loading />}
+      {isLoggedIn ? (
         <div>
           <Game setIsLoading={setIsLoading} props={props} logout={logout} />
           <Route path="/map" component={Map} />

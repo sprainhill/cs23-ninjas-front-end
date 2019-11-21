@@ -8,6 +8,8 @@ import PlayersInRoom from './PlayersInRoom.js';
 import Chat from './Chat.js';
 import Loading from './Loading.js';
 
+import { rooms } from './rooms.js';
+
 const Game = ({ logout }) => {
   const [gameInfo, setGameInfo] = useState(null);
   const [direction, setDirection] = useState('');
@@ -15,20 +17,32 @@ const Game = ({ logout }) => {
 
   const [loading, setLoading] = useState(false);
 
+  const [mapRooms, setMapRooms] = useState(null);
+
   const initGame = () => {
     return axiosWithAuth()
       .get('api/adv/init/')
       .then(res => {
-        console.log(res.data);
+        console.log(res.data.sewer_map.rooms);
         let roomObj = {
           type: 'room',
           text: `${res.data.description}`
         };
         setGameInfo(res.data);
         setCommands([roomObj]);
+        setMapRooms(res.data.sewer_map.rooms);
       })
       .catch(err => console.log(err));
   };
+
+  // const getRooms = () => {
+  //   return axiosWithAuth()
+  //     .get('api/adv/rooms/')
+  //     .then(res => {
+  //       setMapRooms(JSON.parse(res.data.rooms));
+  //     })
+  //     .catch(err => console.log(err));
+  // };
 
   const move = (e, cardinal) => {
     e.preventDefault();
@@ -39,6 +53,7 @@ const Game = ({ logout }) => {
       .then(res => {
         console.log(res);
         setGameInfo(res.data);
+
         setLoading(false);
         let moveObj = {
           type: 'move',
@@ -67,12 +82,17 @@ const Game = ({ logout }) => {
   useEffect(() => {
     initGame();
   }, []);
+
   if (gameInfo) {
     return (
       <div className="game-container">
         <div className="column side">
           <div className="box map">
-            <MapDisplay gameInfo={gameInfo} />
+            {mapRooms && gameInfo ? (
+              <MapDisplay mapRooms={mapRooms} gameInfo={gameInfo} />
+            ) : (
+              <Loading />
+            )}
           </div>
           <div className="box player-info">
             <Player gameInfo={gameInfo} />
