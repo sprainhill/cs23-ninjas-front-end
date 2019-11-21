@@ -18,11 +18,9 @@ const SignUp = ({ history, setIsLoggedIn, setIsLoading }) => {
   const handleSubmit = e => {
     e.preventDefault();
     console.log('user from register handlesubmit', user);
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const url = 'https://lambda-mud-test.herokuapp.com/';
     setIsLoading(true);
     axios
-      .post(`${proxy}${url}api/registration/`, user)
+      .post(`${process.env.REACT_APP_BASE_URL}api/registration/`, user)
       .then(res => {
         localStorage.setItem('token', res.data.key);
         setIsLoading(false);
