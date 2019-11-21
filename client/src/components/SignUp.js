@@ -35,27 +35,39 @@ const SignUp = ({ history, setIsLoggedIn, setIsLoading }) => {
       });
   };
   return (
-    <div>
+    <div className="form signup-container">
       <form onSubmit={handleSubmit}>
-        <input
-          onChange={handleChange}
-          type="text"
-          placeholder="Username"
-          name="username"
-        />
-        <input
-          onChange={handleChange}
-          type="password"
-          placeholder="Password"
-          name="password1"
-        />
-        <input
-          onChange={handleChange}
-          type="password"
-          placeholder="Confirm Password"
-          name="password2"
-        />
-        <button type="submit">Sign Up</button>
+        <h2>New Player?</h2>
+        <div className="form-inputs-container">
+          <hr />
+          <input
+            className="input-text"
+            onChange={handleChange}
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <hr />
+          <input
+            className="input-text"
+            onChange={handleChange}
+            type="password"
+            placeholder="Password"
+            name="password1"
+          />
+          <hr />
+          <input
+            className="input-text"
+            onChange={handleChange}
+            type="password"
+            placeholder="Confirm Password"
+            name="password2"
+          />
+          <hr />
+        </div>
+        <button className="form-button" type="submit">
+          Sign Up
+        </button>
       </form>
     </div>
   );

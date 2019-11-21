@@ -33,21 +33,29 @@ const Login = ({ history, setIsLoggedIn, setIsLoading }) => {
   };
 
   return (
-    <div>
+    <div className="form login-container">
       <form onSubmit={handleSubmit}>
-        <input
-          onChange={handleChange}
-          type="text"
-          placeholder="Username"
-          name="username"
-        />
-        <input
-          onChange={handleChange}
-          type="password"
-          placeholder="Password"
-          name="password"
-        />
-        <button type="submit">Log In</button>
+        <h2>Existing Player?</h2>
+        <div className="form-inputs-container">
+          <hr />
+          <input
+            onChange={handleChange}
+            type="text"
+            placeholder="Username"
+            name="username"
+          />
+          <hr />
+          <input
+            onChange={handleChange}
+            type="password"
+            placeholder="Password"
+            name="password"
+          />
+          <hr />
+        </div>
+        <button className="form-button" type="submit">
+          Log In
+        </button>
       </form>
     </div>
   );

@@ -4,14 +4,13 @@ import SignUp from './SignUp';
 
 const Enter = ({ history, setIsLoggedIn, setIsLoading }) => {
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="enter-form-container">
       <Login
         setIsLoading={setIsLoading}
         setIsLoggedIn={setIsLoggedIn}
         history={history}
       />
-      <h2>or Sign Up</h2>
+
       <SignUp
         setIsLoading={setIsLoading}
         setIsLoggedIn={setIsLoggedIn}
