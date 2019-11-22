@@ -5,7 +5,7 @@ const Input = ({ move, setDirection, direction }) => {
     setDirection(e.target.value);
   };
   return (
-    <div>
+    <div className="input-text-box">
       <form onSubmit={e => move(e, direction)}>
         <input
           onChange={handleChange}

@@ -110,15 +110,13 @@ const Game = ({ logout }) => {
               })}
           </div>
           <div className="box command-input">
-            {loading ? (
-              <Loading />
-            ) : (
-              <Input
-                direction={direction}
-                setDirection={setDirection}
-                move={move}
-              />
-            )}
+            {loading && <Loading />}
+
+            <Input
+              direction={direction}
+              setDirection={setDirection}
+              move={move}
+            />
           </div>
         </div>
         <div className="column side">

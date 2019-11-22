@@ -117,26 +117,6 @@ hr {
       align-items: space-between;
       height: 100%;
     }
-    .form-button {
-      background: #35ff69;
-      border: none;
-      height: 60px;
-      border-radius: 6px;
-      font-family: Roboto Mono;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 23px;
-      text-align: center;
-      letter-spacing: 0.04em;
-      color: #231927;
-      cursor: pointer;
-      &:hover {
-        border: 2px solid #35ff69;
-        background: none;
-        color: #35ff69;
-      }
-    }
   }
 }
 
@@ -281,4 +261,48 @@ hr {
   background-color: #090909;
   margin: 15px 0 15px -24px;
   overflow: hidden;
+}
+
+.form-button {
+  background: #35ff69;
+  border: none;
+  height: 60px;
+  border-radius: 6px;
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #231927;
+  width: 100%;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid #35ff69;
+    background: none;
+    color: #35ff69;
+  }
+}
+
+.input-text-box {
+  form {
+    height: 60px;
+    border: none;
+    line-height: 60px;
+  }
+  input {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #35ff69;
+    line-height: 60px;
+    border: none;
+    &::placeholder {
+      color: #35ff69;
+    }
+  }
 }

@@ -5,7 +5,9 @@ const Chat = ({ logout }) => {
     <div>
       <h3>Chat</h3>
       <hr />
-      <button onClick={logout}>Log Out</button>
+      <button className="form-button" onClick={logout}>
+        Log Out
+      </button>
     </div>
   );
 };
