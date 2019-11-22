@@ -210,6 +210,26 @@ hr {
   }
   .player-info {
     height: 30vh;
+    p {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    .player-info-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .inventory {
+      margin-bottom: 60px;
+    }
+    .health-bar {
+      width: 100%;
+      border-bottom: 10px solid #35ff69;
+    }
   }
   .command-input {
     height: 70px;
