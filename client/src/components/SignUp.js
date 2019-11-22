@@ -17,7 +17,6 @@ const SignUp = ({ history, setIsLoggedIn, setIsLoading }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('user from register handlesubmit', user);
     setIsLoading(true);
     axios
       .post(`${process.env.REACT_APP_BASE_URL}api/registration/`, user)

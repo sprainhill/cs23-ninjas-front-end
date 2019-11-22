@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-
-import { axiosWithAuth } from '../utilities/axiosWithAuth.js';
+import React, { useState, useEffect } from 'react';
 
 import { Graph } from 'react-d3-graph';
 
@@ -29,9 +27,6 @@ const myConfig = {
 };
 
 const MapSample = ({ mapRooms, gameInfo }) => {
-  console.log(mapRooms);
-  console.log(gameInfo);
-
   const validNodes = [];
 
   mapRooms.forEach(room => {

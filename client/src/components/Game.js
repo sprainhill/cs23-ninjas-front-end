@@ -14,16 +14,13 @@ const Game = ({ logout }) => {
   const [gameInfo, setGameInfo] = useState(null);
   const [direction, setDirection] = useState('');
   const [commands, setCommands] = useState(null);
-
   const [loading, setLoading] = useState(false);
-
   const [mapRooms, setMapRooms] = useState(null);
 
   const initGame = () => {
     return axiosWithAuth()
       .get('api/adv/init/')
       .then(res => {
-        console.log(res.data.sewer_map.rooms);
         let roomObj = {
           type: 'room',
           text: `${res.data.description}`
@@ -35,15 +32,6 @@ const Game = ({ logout }) => {
       .catch(err => console.log(err));
   };
 
-  // const getRooms = () => {
-  //   return axiosWithAuth()
-  //     .get('api/adv/rooms/')
-  //     .then(res => {
-  //       setMapRooms(JSON.parse(res.data.rooms));
-  //     })
-  //     .catch(err => console.log(err));
-  // };
-
   const move = (e, cardinal) => {
     e.preventDefault();
     setLoading(true);
@@ -51,9 +39,7 @@ const Game = ({ logout }) => {
     return axiosWithAuth()
       .post('api/adv/move/', direction)
       .then(res => {
-        console.log(res);
         setGameInfo(res.data);
-
         setLoading(false);
         let moveObj = {
           type: 'move',
