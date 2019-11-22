@@ -16,7 +16,6 @@ const Login = ({ history, setIsLoggedIn, setIsLoading }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log('user from login handlesubmit', user);
     setIsLoading(true);
     axios
       .post(`${process.env.REACT_APP_BASE_URL}api/login/`, user)
